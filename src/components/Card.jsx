@@ -10,9 +10,10 @@ export default function Card({ result }) {
                 <Image
                     src={`https://image.tmdb.org/t/p/original/${result.backdrop_path || result.poster_path
                         }`}
+                    alt={result.title || result.name}
                     width={500}
                     height={300}
-                    className='sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300'
+                    className='sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300 object-cover'
                 ></Image>
 
                 <div className='p-5'>
@@ -21,7 +22,7 @@ export default function Card({ result }) {
                     </h2>
                     <p className='flex items-center'>
                         {result.release_date || result.first_air_date}
-                        <IoMdThumbsUp  className='h-5 mr-1 ml-6 text-emerald-800' />
+                        <IoMdThumbsUp className='h-5 mr-1 ml-6 text-emerald-800' />
                         {result.vote_count}
                     </p>
 
