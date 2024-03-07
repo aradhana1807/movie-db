@@ -1,4 +1,4 @@
-import { Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -6,8 +6,6 @@ import Providers from "./Providers";
 import Navbar from "@/components/Navbar";
 import SearchBox from "@/components/SearchBox";
 import { Suspense } from 'react';
-
-const inter = Inter({ subsets: ["latin"] });
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
